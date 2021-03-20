@@ -1,4 +1,4 @@
-# Dynamics of Spheres
+# Dynamics of Spheres (2016)
 
 ## NOTE: CODE REQUIRES HIGH DEGREE OF REFACTORING
 
