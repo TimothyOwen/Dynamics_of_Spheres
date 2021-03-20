@@ -1,6 +1,10 @@
 # Dynamics of Spheres
 
-Simulations of the dynamics of idealised spheres in four different generalised contexts. Initially created with A-Level students as the target end-users, to help them visualise complex topics taught in class. Built using Python and Tkinter.
+Simulations of the dynamics of idealised spheres in four different generalised contexts. 
+
+Initially created with A-Level students as the target end-users, to help them visualise complex topics taught in class. 
+
+Built using Python and Tkinter.
 
 
 # Theory
