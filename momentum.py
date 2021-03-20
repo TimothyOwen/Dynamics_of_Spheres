@@ -92,12 +92,6 @@ def disable_Mbuttons():
     getvelocityAbtn.config(state=DISABLED)
     getvelocityBbtn.config(state=DISABLED)
     getcorbtn.config(state=DISABLED)
-#ENTRY BOX VARIABLES
-massAinput=StringVar()
-massBinput=StringVar()
-velocityAinput=StringVar()
-velocityBinput=StringVar()
-corinput=StringVar()
 #ENTRY BOX PROCEDURES
 def get_massA():
     global Mm1,Mstop
@@ -221,6 +215,25 @@ def restitution_calculator():
     initialv1=Mv1
     Mv1=(Mm1*Mv1+Mm2*Mv2+Mm2*Me*(Mv2-Mv1))/(Mm1+Mm2)
     Mv2=(Mm1*initialv1+Mm2*Mv2+Mm1*Me*(initialv1-Mv2))/(Mm1+Mm2)
+#RESET CANVAS
+def reset_canvas2():
+    global menupause2
+    #INDICATES THAT THE ACTIVE LOOP SHOULD STOP TO CREATE THE MENU
+    menupause2='yes'
+    #RESETTING EVERYTHING
+    canvas.delete("all")
+    reset_basevars()
+    configure_Mbuttons()
+def menu():
+    global menupause1,menupause2,menupause3,menupause4
+    #MAKE SURE EVERY ACTIVE LOOP IS BROKEN
+    menupause1='yes'
+    menupause2='yes'
+    menupause3='yes'
+    menupause4='yes'
+    #RESET EVERYTHING AND GO BACK TO THE MAIN MENU
+    canvas.delete("all")
+    main_menu()
 #-------------------------------------------------------------------------------
 #THE INITIALISING PROCEDURE STARTED WHEN THE USER CLICKS THE MOMENTUM START BUTTON
 def __init2__():

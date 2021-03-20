@@ -1,20 +1,13 @@
 #-------------------------------------------------------------------------------
 #PROJECTILE MOTION
 #-------------------------------------------------------------------------------
+#-------------------------------------------------------------------------------
+#IMPORTING EXTERNAL MODULES
 from tkinter import *
 from tkinter import ttk
 import time
 import random
 import math
-#-------------------------------------------------------------------------------
-#VARIABLES FOR THE LISTBOX
-listbox=''
-typeofoption=''
-#DECLARING OPTION VARIABLES AS STRINGS
-option=StringVar()
-Pginput=StringVar()
-Pangleinput=StringVar()
-Pvinput=StringVar()
 #CREATING THE TEXT FOR THE INFORMATION BUTTON
 def create_Ptext():
     global menupause1
@@ -33,7 +26,7 @@ def create_Ptext():
         canvas.create_text(10,Pline,text=datacontents,font=("Arial", 10, "bold"),anchor=NW)
         Pline+=10
 #CREATING LABELS
-def create_Plabels():
+def create_Plabels(canvas, Pg, PangleDeg, Pv):
     text1='g: '+str(round(float(Pg),2))
     text2='Angle: '+str(round(float(PangleDeg),2))
     text3='Velocity: '+str(round(float(Pv),2))
@@ -41,7 +34,7 @@ def create_Plabels():
     canvas.create_text(800,80, text=text2, font="15", tag='Plabels')
     canvas.create_text(800,100, text=text3, font="15", tag='Plabels')
 #CONFIGURING MAIN BUTTONS
-def configure_Pbuttons():
+def configure_Pbuttons(canvas, window, option, Pginput, Pangleinput, Pvinput):
     global startbutton,pausebutton,resetbutton,getcombogravitybtn,getgravitybtn,getanglebtn,getvelocitybtn
     #CREATE TITLE
     canvas.create_text(800,30,text="Projectile Motion Simulator",font=("Arial", 15, "bold"))
@@ -52,7 +45,7 @@ def configure_Pbuttons():
     pausebutton=Button(canvas, text="PAUSE", command=pause_run)
     pausebutton.configure(width=10, activebackground="white")
     pausebutton_window=canvas.create_window(10,40,anchor=NW,window=pausebutton)
-    resetbutton=Button(canvas, text="RESET", command=reset_canvas1)
+    resetbutton=Button(canvas, text="RESET", command=reset_canvasCommand)
     resetbutton.configure(width=10, activebackground="white")
     resetbutton_window=canvas.create_window(10,70,anchor=NW,window=resetbutton)
     menubutton=Button(canvas, text="MENU", command=menu)
@@ -91,7 +84,8 @@ def configure_Pbuttons():
     getvelocitybtn_window=canvas.create_window(400,40,anchor=NW,window=getvelocitybtn)
     #DISABLING THE PAUSE BUTTON
     pausebutton.config(state=DISABLED)
-    create_Plabels()
+    reset_basevars()
+    create_Plabels(canvas, Pg, PangleDeg, Pv)
 #DISABLING BUTTONS SO THEY CANT BE PRESSED WHEN ANIMATION IS ACTIVE
 def disable_Pbuttons():
     startbutton.config(state=DISABLED)
@@ -182,6 +176,19 @@ def get_Pv():
         disable_Pbuttons()
         canvas.update()
         getvelocitybtn.config(state=DISABLED)
+def reset_basevars():
+    global Pstop,Px,Pg,Pangle,PangleDeg,Pv
+    #PROJECTILES
+    #---------------------------------------------------------------------------
+    Pstop='no'
+    #X COORDINATE OF PROJECTILES MUST BE RESET EACH TIME YOU HIT RESET
+    Px=1
+    Pg=9.81
+    #THE ANGLE USED FOR CALCULATIONS MUST BE IN RADIANS AND THE ONE FOR DISPLAY IN DEGREES, BEING
+    #GLOBAL MEANS THAT I MUST HAVE TWO SEPERATE VARIABLES
+    Pangle=45
+    PangleDeg=Pangle
+    Pv=100
 #MATHEMATICAL SOLUTION TO FIND Y CO FROM X CO
 def create_Yco(x):
     x+=1
@@ -190,6 +197,26 @@ def create_Yco(x):
 #CREATE BALL WITH COS X,Y
 def create_ball(x,y):
     canvas.create_oval(x-10, y-10, x+10, y+10, fill='black', outline='', activefill='white',tags='ball')
+#PAUSING EACH ANIMATION
+def pause_run():
+    global pause
+    #IF PAUSE IS EQUAL TO YES IT SHOULD CAUSE EACH ACTIVE LOOP TO PAUSE
+    pause='yes'
+def error_message(canvas):
+    canvas.create_text(600,300,text='# AN ERROR HAS OCCURED: THE DATA INPUTTED COULD BE INVALID, BE OUT OF RANGE, OR THE ANIMATION IS OUT OF DISPLAY RANGE: PLEASE RESET THE MODULE AND INPUT NEW DATA #',fill='red',font=("Arial", 8, "bold"),tags='error')
+    canvas.update()
+def menu():
+    global menupause1,menupause2,menupause3,menupause4
+    #MAKE SURE EVERY ACTIVE LOOP IS BROKEN
+    menupause1='yes'
+    menupause2='yes'
+    menupause3='yes'
+    menupause4='yes'
+    #RESET EVERYTHING AND GO BACK TO THE MAIN MENU
+    canvas.delete("all")
+    main_menu()
+def reset_canvasCommand():
+    reset_canvas1()
 #-------------------------------------------------------------------------------
 #THE INITIALISING PROCEDURE STARTED WHEN THE USER CLICKS THE PROJECTILE START BUTTON
 def __init1__():
@@ -262,7 +289,7 @@ def __init1__():
             time.sleep(0.01)
         except:
             #IF AN UNFORESEEN ERROR OCCURS THIS IS DONE
-            error_message()
+            error_message(canvas)
             pausebutton.config(state=DISABLED)
             resetbutton.config(state=ACTIVE)
             canvas.update()

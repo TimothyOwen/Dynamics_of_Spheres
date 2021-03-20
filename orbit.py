@@ -154,3 +154,51 @@ def polartocartesian(r,theta):
     x=int(math.ceil(r*math.cos(math.radians(theta))))
     y=int(math.ceil(r*math.sin(math.radians(theta))))
     return x,y
+#RESET CANVAS
+def reset_canvas4():
+    global menupause4
+    #INDICATES THAT THE ACTIVE LOOP SHOULD STOP TO CREATE THE MENU
+    menupause4='yes'
+    #RESETTING EVERYTHING
+    canvas.delete("all")
+    reset_basevars()
+    __init4__()
+def menu():
+    global menupause1,menupause2,menupause3,menupause4
+    #MAKE SURE EVERY ACTIVE LOOP IS BROKEN
+    menupause1='yes'
+    menupause2='yes'
+    menupause3='yes'
+    menupause4='yes'
+    #RESET EVERYTHING AND GO BACK TO THE MAIN MENU
+    canvas.delete("all")
+    main_menu()
+#----------------------------------------------------------------------------------------------------
+#MAIN INTIATING PROCEDURE
+def __init4__():
+    global Ostop,Oeinput,Oainput,Ovinput,menupause4
+    #CREATE TITLE
+    canvas.create_text(600,30,text="Orbital Mechanics Simulator",font=("Arial", 15, "bold"))
+    #DEFINING AS STRING VARIABLES
+    Oeinput=StringVar()
+    Oainput=StringVar()
+    Ovinput=StringVar()
+    #CONFIGURING BUTTONS
+    configure_Obuttons()
+    create_Olabels()
+    #RESTTING THE BASE VARS
+    reset_basevars()
+    #FOR THE LOOP
+    theta=90
+    menupause4='no'
+    Ostop='no'
+    while Ostop!='break' and menupause4!='yes':
+        try:
+            create_satellite(theta)
+            #UPDATES AND ITERATES IT
+            canvas.update()
+            theta+=1
+            canvas.delete('Osatellite')
+        except:
+            error_message()
+            canvas.update()

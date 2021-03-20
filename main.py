@@ -43,12 +43,36 @@ window.title("Project")
 #START OF THE MAIN BODY OF THE CODE
 #-------------------------------------------------------------------------------
 #-------------------------------------------------------------------------------
+#VARIABLES FOR THE PROJECTILE LISTBOX
+listbox=''
+typeofoption=''
+#DECLARING OPTION VARIABLES AS STRINGS
+option=StringVar()
+Pginput=StringVar()
+Pangleinput=StringVar()
+Pvinput=StringVar()
+#VARIABLES FOR THE MOMENTUM ENTRYBOX
+massAinput=StringVar()
+massBinput=StringVar()
+velocityAinput=StringVar()
+velocityBinput=StringVar()
+corinput=StringVar()
 #CREATING THE CANVAS THE MAIN TOOL USED FOR ANIMATION
+#----------------------------------------------------------------------------------------------------
 def create_canvas():
     global canvas
     canvas=Canvas(window, width=1200, height=600, background='grey')
     canvas.grid(row=0, column=0, sticky=(N,W,E,S))
 #RESETTING THE BASE VARIABLES FOR EVERY MODULE EACH TIME YOU RESET ONE
+#RESET CANVAS
+def reset_canvas1():
+    global menupause1
+    #INDICATES THAT THE ACTIVE LOOP SHOULD STOP TO CREATE THE MENU
+    menupause1='yes'
+    #RESETTING EVERYTHING
+    canvas.delete("all")
+    reset_basevars()
+    projectile.configure_Pbuttons(canvas,window,option,Pginput,Pangleinput,Pvinput)
 def reset_basevars():
     global Pstop,Px,Pg,Pangle,PangleDeg,Pv,Mstop,Mx1,Mx2,Mm1,Mm2,Mv1,Mv2,Me,Sm,Sk,SA,Odirection,Oe,Oa,Ov
     #PROJECTILES
@@ -111,61 +135,17 @@ def main_menu():
     projectilebutton=Button(canvas,text="Projectiles",command=reset_canvas1,font="Arial")
     projectilebutton.configure(width=10,activebackground="white")
     projectilebutton_window=canvas.create_window(600,250,window=projectilebutton)
-    momentumbutton=Button(canvas,text="Momentum",command=reset_canvas2,font="Brown")
+    momentumbutton=Button(canvas,text="Momentum",command=momentum.reset_canvas2,font="Brown")
     momentumbutton.configure(width=10,activebackground="white")
     momentumbutton_window=canvas.create_window(600,300,window=momentumbutton)
-    shmbutton=Button(canvas,text="SHM",command=reset_canvas3,font="Brown")
+    shmbutton=Button(canvas,text="SHM",command=shm.reset_canvas3,font="Brown")
     shmbutton.configure(width=10,activebackground="white")
     shmbutton_window=canvas.create_window(600,350,window=shmbutton)
-    orbitbutton=Button(canvas,text="Orbits",command=reset_canvas4,font="Brown")
+    orbitbutton=Button(canvas,text="Orbits",command=orbit.reset_canvas4,font="Brown")
     orbitbutton.configure(width=10,activebackground="white")
     orbitbutton_window=canvas.create_window(600,400,window=orbitbutton)
     #CREATING STAMP
     canvas.create_text(5,595,text="© Tim Owen 2016",anchor=SW,font="Brown 8")
-#RESETTING EACH CANVAS FOR THE 4 SIMULATION MODULES, USED TO RESET EACH ONE
-def reset_canvas1():
-    global menupause1
-    #INDICATES THAT THE ACTIVE LOOP SHOULD STOP TO CREATE THE MENU
-    menupause1='yes'
-    #RESETTING EVERYTHING
-    canvas.delete("all")
-    reset_basevars()
-    configure_Pbuttons()
-def reset_canvas2():
-    global menupause2
-    #INDICATES THAT THE ACTIVE LOOP SHOULD STOP TO CREATE THE MENU
-    menupause2='yes'
-    #RESETTING EVERYTHING
-    canvas.delete("all")
-    reset_basevars()
-    configure_Mbuttons()
-def reset_canvas3():
-    global menupause3
-    #INDICATES THAT THE ACTIVE LOOP SHOULD STOP TO CREATE THE MENU
-    menupause3='yes'
-    #RESETTING EVERYTHING
-    canvas.delete("all")
-    __init3__()
-def reset_canvas4():
-    global menupause4
-    #INDICATES THAT THE ACTIVE LOOP SHOULD STOP TO CREATE THE MENU
-    menupause4='yes'
-    #RESETTING EVERYTHING
-    canvas.delete("all")
-    reset_basevars()
-    __init4__()
-#THE SECOND TWO INITIALISING PROCEDURES DONT HAVE BUTTON CONFIGURING PROCEDURES BECAUSE THEY RUN WITHOUT YOU PRESSING START
-#PROCEDURE USED TO GO BACK TO THE MAIN MENU
-def menu():
-    global menupause1,menupause2,menupause3,menupause4
-    #MAKE SURE EVERY ACTIVE LOOP IS BROKEN
-    menupause1='yes'
-    menupause2='yes'
-    menupause3='yes'
-    menupause4='yes'
-    #RESET EVERYTHING AND GO BACK TO THE MAIN MENU
-    canvas.delete("all")
-    main_menu()
 #THIS PROCEDURE READS THE DATA FILE AND STORES THE INFORMATION IN WHICHEVERS MODULES INFORMATION LIST
 def data_file():
     global projectilelist,momentumlist,shmlist,orbitlist
@@ -187,39 +167,6 @@ def data_file():
     for o in range(0,25):
         new=data.readline()
         orbitlist+=[new]
-
-
-
-
-#----------------------------------------------------------------------------------------------------
-#MAIN INTIATING PROCEDURE
-def __init4__():
-    global Ostop,Oeinput,Oainput,Ovinput,menupause4
-    #CREATE TITLE
-    canvas.create_text(600,30,text="Orbital Mechanics Simulator",font=("Arial", 15, "bold"))
-    #DEFINING AS STRING VARIABLES
-    Oeinput=StringVar()
-    Oainput=StringVar()
-    Ovinput=StringVar()
-    #CONFIGURING BUTTONS
-    configure_Obuttons()
-    create_Olabels()
-    #RESTTING THE BASE VARS
-    reset_basevars()
-    #FOR THE LOOP
-    theta=90
-    menupause4='no'
-    Ostop='no'
-    while Ostop!='break' and menupause4!='yes':
-        try:
-            create_satellite(theta)
-            #UPDATES AND ITERATES IT
-            canvas.update()
-            theta+=1
-            canvas.delete('Osatellite')
-        except:
-            error_message()
-            canvas.update()
 #------------------------------------------------------------
 #END OF MAIN CODE
 #------------------------------------------------------------

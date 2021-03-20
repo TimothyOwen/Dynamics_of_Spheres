@@ -24,6 +24,24 @@ def getk(scale):
 def getamplitude(scale):
     global SA
     SA=float(scale)
+#RESET CANVAS
+def reset_canvas3():
+    global menupause3
+    #INDICATES THAT THE ACTIVE LOOP SHOULD STOP TO CREATE THE MENU
+    menupause3='yes'
+    #RESETTING EVERYTHING
+    canvas.delete("all")
+    __init3__()
+def menu():
+    global menupause1,menupause2,menupause3,menupause4
+    #MAKE SURE EVERY ACTIVE LOOP IS BROKEN
+    menupause1='yes'
+    menupause2='yes'
+    menupause3='yes'
+    menupause4='yes'
+    #RESET EVERYTHING AND GO BACK TO THE MAIN MENU
+    canvas.delete("all")
+    main_menu()
 #----------------------------------------------------------------------------------------------------
 #SHM INITIALISER
 def __init3__():
