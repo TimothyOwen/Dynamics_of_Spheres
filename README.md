@@ -1,6 +1,6 @@
 # Dynamics of Spheres
 
-Simulations of the dynamics of idealised spheres in four different generalised contexts. Initially created with A-Level students as the target end-users, to help them visualise complex topics taught in class. 
+Simulations of the dynamics of idealised spheres in four different generalised contexts. Initially created with A-Level students as the target end-users, to help them visualise complex topics taught in class. Built using Python and Tkinter.
 
 
 # Theory
@@ -9,7 +9,7 @@ Simulations of the dynamics of idealised spheres in four different generalised c
 
 The parabolic equation for the trajectory of a projectile in a uniform gravitational field with no resistance. Angle of projection (<a href="https://www.codecogs.com/eqnedit.php?latex=\Theta" target="_blank"><img src="https://latex.codecogs.com/gif.latex?\Theta" title="\Theta" /></a>), gravitational constant (g), initial velocity (<a href="https://www.codecogs.com/eqnedit.php?latex=V_{0}" target="_blank"><img src="https://latex.codecogs.com/gif.latex?V_{0}" title="V_{0}" /></a>);
 
- <a href="https://www.codecogs.com/eqnedit.php?latex=y=\tan&space;(\Theta&space;)x&space;-&space;\frac{g}{2V_{0}^{2}cos^{2}(\Theta&space;)}x^{2}" target="_blank"><img src="https://latex.codecogs.com/gif.latex?y=\tan&space;(\Theta&space;)x&space;-&space;\frac{g}{2V_{0}^{2}cos^{2}(\Theta&space;)}x^{2}" title="y=\tan (\Theta )x - \frac{g}{2V_{0}^{2}cos^{2}(\Theta )}x^{2}" /></a>
+<a href="https://www.codecogs.com/eqnedit.php?latex=y=\tan&space;(\Theta&space;)x&space;-&space;\frac{g}{2V_{0}^{2}cos^{2}(\Theta&space;)}x^{2}" target="_blank"><img src="https://latex.codecogs.com/gif.latex?y=\tan&space;(\Theta&space;)x&space;-&space;\frac{g}{2V_{0}^{2}cos^{2}(\Theta&space;)}x^{2}" title="y=\tan (\Theta )x - \frac{g}{2V_{0}^{2}cos^{2}(\Theta )}x^{2}" /></a>
 
 where
 
