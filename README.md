@@ -15,7 +15,7 @@ where
 
 ## Momentum
 
-For two uniform masses (<a href="https://www.codecogs.com/eqnedit.php?latex=m_{a},&space;m_{b}" target="_blank"><img src="https://latex.codecogs.com/gif.latex?m_{a},&space;m_{b}" title="m_{a}, m_{b}" /></a>) travelling at velocities (<a href="https://www.codecogs.com/eqnedit.php?latex=v_{a},&space;v_{b}" target="_blank"><img src="https://latex.codecogs.com/gif.latex?v_{a},&space;v_{b}" title="v_{a}, v_{b}" /></a>) in a one dimensional resistance-free environment we can find a solution for the final velocities of both masses in a collision with coefficient of restitution (<a href="https://www.codecogs.com/eqnedit.php?latex=C_{R}" target="_blank"><img src="https://latex.codecogs.com/gif.latex?C_{R}" title="C_{R}" /></a>):
+For two uniform masses (<a href="https://www.codecogs.com/eqnedit.php?latex=m_{a},&space;m_{b}" target="_blank"><img src="https://latex.codecogs.com/gif.latex?m_{a},&space;m_{b}" title="m_{a}, m_{b}" /></a>) travelling at velocities (<a href="https://www.codecogs.com/eqnedit.php?latex=u_{a},&space;u_{b}" target="_blank"><img src="https://latex.codecogs.com/gif.latex?u_{a},&space;u_{b}" title="u_{a}, u_{b}" /></a>) in a one dimensional resistance-free environment we find a solution for the final velocities of both masses in a collision with coefficient of restitution (<a href="https://www.codecogs.com/eqnedit.php?latex=C_{R}" target="_blank"><img src="https://latex.codecogs.com/gif.latex?C_{R}" title="C_{R}" /></a>):
 
 <a href="https://www.codecogs.com/eqnedit.php?latex=v_{a}&space;=&space;\frac{m_{a}u_{a}&plus;m_{b}u_{b}&plus;m_{b}C_{R}(u_{b}-u_{a})}{m_{a}&plus;m_{b}}" target="_blank"><img src="https://latex.codecogs.com/gif.latex?v_{a}&space;=&space;\frac{m_{a}u_{a}&plus;m_{b}u_{b}&plus;m_{b}C_{R}(u_{b}-u_{a})}{m_{a}&plus;m_{b}}" title="v_{a} = \frac{m_{a}u_{a}+m_{b}u_{b}+m_{b}C_{R}(u_{b}-u_{a})}{m_{a}+m_{b}}" /></a>
 
@@ -35,7 +35,7 @@ where
 ## Simple Harmonic Motion
 
 
-Simple harmonic motion is a type of periodic motion where the restoring force is directly proportional to the displacement and acts in the direction opposite to that of the displacement.
+We assume a restoring force that is directly proportional to the displacement (y) and acts in the direction opposite to that of the displacement. Spring constant (k), mass (m), time (t).
 
 <a href="https://www.codecogs.com/eqnedit.php?latex=y&space;=&space;Asin(wt)&space;=&space;Asin((\frac{k}{m})^{\frac{1}{2}}t)" target="_blank"><img src="https://latex.codecogs.com/gif.latex?y&space;=&space;Asin(wt)&space;=&space;Asin((\frac{k}{m})^{\frac{1}{2}}t)" title="y = Asin(wt) = Asin((\frac{k}{m})^{\frac{1}{2}}t)" /></a>
 
