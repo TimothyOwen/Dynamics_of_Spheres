@@ -11,7 +11,7 @@ The parabolic equation for the trajectory of a projectile in a uniform gravitati
 
 <a href="https://www.codecogs.com/eqnedit.php?latex=y=\tan&space;(\Theta&space;)x&space;-&space;\frac{g}{2V_{0}^{2}cos^{2}(\Theta&space;)}x^{2}" target="_blank"><img src="https://latex.codecogs.com/gif.latex?y=\tan&space;(\Theta&space;)x&space;-&space;\frac{g}{2V_{0}^{2}cos^{2}(\Theta&space;)}x^{2}" title="y=\tan (\Theta )x - \frac{g}{2V_{0}^{2}cos^{2}(\Theta )}x^{2}" /></a>
 
-where
+Where the boundary conditions for user input are;
 
 <a href="https://www.codecogs.com/eqnedit.php?latex=0&space;\leq&space;g" target="_blank"><img src="https://latex.codecogs.com/gif.latex?0&space;\leq&space;g" title="0 \leq g" /></a>
 
@@ -30,7 +30,7 @@ and
 
 <a href="https://www.codecogs.com/eqnedit.php?latex=v_{b}&space;=&space;\frac{m_{a}u_{a}&plus;m_{b}u_{b}&plus;m_{a}C_{R}(u_{a}-u_{b})}{m_{a}&plus;m_{b}}" target="_blank"><img src="https://latex.codecogs.com/gif.latex?v_{b}&space;=&space;\frac{m_{a}u_{a}&plus;m_{b}u_{b}&plus;m_{a}C_{R}(u_{a}-u_{b})}{m_{a}&plus;m_{b}}" title="v_{b} = \frac{m_{a}u_{a}+m_{b}u_{b}+m_{a}C_{R}(u_{a}-u_{b})}{m_{a}+m_{b}}" /></a>
 
-where
+Where the boundary conditions for user input are;
 
 <a href="https://www.codecogs.com/eqnedit.php?latex=0&space;\leq&space;m_{a},&space;m_{b}" target="_blank"><img src="https://latex.codecogs.com/gif.latex?0&space;\leq&space;m_{a},&space;m_{b}" title="0 \leq m_{a}, m_{b}" /></a>
 
@@ -46,7 +46,7 @@ We assume a restoring force that is directly proportional to the displacement (y
 
 <a href="https://www.codecogs.com/eqnedit.php?latex=y&space;=&space;Asin(wt)&space;=&space;Asin((\frac{k}{m})^{\frac{1}{2}}t)" target="_blank"><img src="https://latex.codecogs.com/gif.latex?y&space;=&space;Asin(wt)&space;=&space;Asin((\frac{k}{m})^{\frac{1}{2}}t)" title="y = Asin(wt) = Asin((\frac{k}{m})^{\frac{1}{2}}t)" /></a>
 
-where
+Where the boundary conditions for user input are;
 
 <a href="https://www.codecogs.com/eqnedit.php?latex=1&space;\leq&space;m&space;\leq&space;10" target="_blank"><img src="https://latex.codecogs.com/gif.latex?1&space;\leq&space;m&space;\leq&space;10" title="1 \leq m \leq 10" /></a>
 
@@ -62,7 +62,7 @@ The equation of an ellipse with eccentricity (e) can be described;
 
 (This equation when programmed as an animation fails to accurately describe a satellite's motion. To fix this I crudely tried to relate the distance between the orbiting bodies to the time that should be waited between each iteration. The module is patchy and should be ignored for those who seek acccuracy.)
 
-where
+Where the boundary conditions for user input are;
 
 <a href="https://www.codecogs.com/eqnedit.php?latex=0&space;\leq&space;e&space;<&space;1" target="_blank"><img src="https://latex.codecogs.com/gif.latex?0&space;\leq&space;e&space;<&space;1" title="0 \leq e < 1" /></a>
 
