@@ -1,7 +1,3 @@
-#-------------------------------------------------------------------------------
-#-------------------------------------------------------------------------------
-#-------------------------------------------------------------------------------
-#IMPORTING NEEDED MODULES
 from tkinter import *
 from tkinter import ttk
 import time
@@ -11,7 +7,6 @@ import projectile
 import momentum
 import shm
 import orbit
-#-------------------------------------------------------------------------------
 #CREATING THE MAIN WINDOW
 window=Tk()
 window.title("Project")
@@ -43,7 +38,6 @@ def reset_basevars():
 #PAUSING EACH ANIMATION
 def pause_run():
     global pause
-    #IF PAUSE IS EQUAL TO YES IT SHOULD CAUSE EACH ACTIVE LOOP TO PAUSE
     pause='yes'
 #UNIVERSAL ERROR MESSAGE FOR EVERY MODULE
 def error_message():
@@ -54,13 +48,10 @@ def error_message():
 #-------------------------------------------------------------------------------
 #-------------------------------------------------------------------------------
 def main_menu():
-    #CREATING THE CANVAS ON THE MAIN WINDOW
     create_canvas()
     #READING THE DATA FILE INTO A ARRAY
     data_file()
-    #MAIN MENU TITLE
     canvas.create_text(600,200,text="Main Menu",font="Helvetica 20")
-    #BUTTONS TO EACH MODULE
     projectilebutton=Button(canvas,text="Projectiles",command=reset_canvas1,font="Arial")
     projectilebutton.configure(width=10,activebackground="white")
     projectilebutton_window=canvas.create_window(600,250,window=projectilebutton)
@@ -73,7 +64,6 @@ def main_menu():
     orbitbutton=Button(canvas,text="Orbits",command=reset_canvas4,font="Brown")
     orbitbutton.configure(width=10,activebackground="white")
     orbitbutton_window=canvas.create_window(600,400,window=orbitbutton)
-    #CREATING STAMP
     canvas.create_text(5,595,text="� Tim Owen 2016",anchor=SW,font="Brown 8")
 #RESETTING EACH CANVAS FOR THE 4 SIMULATION MODULES, USED TO RESET EACH ONE
 def reset_canvas1():
@@ -123,7 +113,6 @@ def menu():
 def data_file():
     global projectilelist,momentumlist,shmlist,orbitlist
     data=open('datafile.txt','r+')
-    #LISTS OF INFORMATION
     projectilelist=[]
     momentumlist=[]
     shmlist=[]
