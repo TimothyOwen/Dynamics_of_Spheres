@@ -1,8 +1,15 @@
+# Dynamics of Spheres
+
+Simulations of the dynamics of idealised spheres in four different generalised contexts. Initially created with A-Level students as the target end-users, to help them visualise complex topics taught in class. 
+
+
+# Theory
+
 ## Projectile Motion
 
-The parabolic equation for the trajectory of a projectile in a uniform gravitational field with no resistance;
+The parabolic equation for the trajectory of a projectile in a uniform gravitational field with no resistance. Angle of projection (<a href="https://www.codecogs.com/eqnedit.php?latex=\Theta" target="_blank"><img src="https://latex.codecogs.com/gif.latex?\Theta" title="\Theta" /></a>), gravitational constant (g), initial velocity (<a href="https://www.codecogs.com/eqnedit.php?latex=V_{0}" target="_blank"><img src="https://latex.codecogs.com/gif.latex?V_{0}" title="V_{0}" /></a>);
 
- <a href="https://www.codecogs.com/eqnedit.php?latex=\tan&space;(\Theta&space;)x&space;-&space;\frac{g}{2V_{0}^{2}cos^{2}(\Theta&space;)}x^{2}" target="_blank"><img src="https://latex.codecogs.com/gif.latex?\tan&space;(\Theta&space;)x&space;-&space;\frac{g}{2V_{0}^{2}cos^{2}(\Theta&space;)}x^{2}" title="\tan (\Theta )x - \frac{g}{2V_{0}^{2}cos^{2}(\Theta )}x^{2}" /></a>
+ <a href="https://www.codecogs.com/eqnedit.php?latex=y=\tan&space;(\Theta&space;)x&space;-&space;\frac{g}{2V_{0}^{2}cos^{2}(\Theta&space;)}x^{2}" target="_blank"><img src="https://latex.codecogs.com/gif.latex?y=\tan&space;(\Theta&space;)x&space;-&space;\frac{g}{2V_{0}^{2}cos^{2}(\Theta&space;)}x^{2}" title="y=\tan (\Theta )x - \frac{g}{2V_{0}^{2}cos^{2}(\Theta )}x^{2}" /></a>
 
 where
 
@@ -49,11 +56,11 @@ where
 
 ## Orbits
 
-The equation of an ellipse can be written as;
+The equation of an ellipse with eccentricity (e) can be described;
 
-<a href="https://www.codecogs.com/eqnedit.php?latex=r&space;=&space;\frac{a(1-e^{2})}{1&plus;cos(\Theta&space;)e}" target="_blank"><img src="https://latex.codecogs.com/gif.latex?r&space;=&space;\frac{a(1-e^{2})}{1&plus;cos(\Theta&space;)e}" title="r = \frac{a(1-e^{2})}{1+cos(\Theta )e}" /></a>
+<a href="https://www.codecogs.com/eqnedit.php?latex=r(\Theta)&space;=&space;\frac{a(1-e^{2})}{1&plus;cos(\Theta&space;)e}" target="_blank"><img src="https://latex.codecogs.com/gif.latex?r(\Theta)&space;=&space;\frac{a(1-e^{2})}{1&plus;cos(\Theta&space;)e}" title="r(\Theta) = \frac{a(1-e^{2})}{1+cos(\Theta )e}" /></a>
 
-(This equation when programmed as a animation fails to accurately describe a satellites motion. To fix this I crudely tried to relate the distance between the orbiting bodies to the time that should be waited between each iteration. The module is patchy and should be ignored for those who seek acccuracy.)
+(This equation when programmed as an animation fails to accurately describe a satellite's motion. To fix this I crudely tried to relate the distance between the orbiting bodies to the time that should be waited between each iteration. The module is patchy and should be ignored for those who seek acccuracy.)
 
 where
 
