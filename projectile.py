@@ -8,6 +8,8 @@ from tkinter import ttk
 import time
 import random
 import math
+#-------------------------------------------------------------------------------
+#-------------------------------------------------------------------------------
 #CREATING THE TEXT FOR THE INFORMATION BUTTON
 def create_Ptext():
     global menupause1
@@ -34,8 +36,10 @@ def create_Plabels(canvas, Pg, PangleDeg, Pv):
     canvas.create_text(800,80, text=text2, font="15", tag='Plabels')
     canvas.create_text(800,100, text=text3, font="15", tag='Plabels')
 #CONFIGURING MAIN BUTTONS
-def configure_Pbuttons(canvas, window, option, Pginput, Pangleinput, Pvinput):
-    global startbutton,pausebutton,resetbutton,getcombogravitybtn,getgravitybtn,getanglebtn,getvelocitybtn
+def configure_Pbuttons(mainCanvas, mainWindow, option, Pginput, Pangleinput, Pvinput):
+    global canvas,window,startbutton,pausebutton,resetbutton,getcombogravitybtn,getgravitybtn,getanglebtn,getvelocitybtn
+    canvas = mainCanvas
+    window = mainWindow
     #CREATE TITLE
     canvas.create_text(800,30,text="Projectile Motion Simulator",font=("Arial", 15, "bold"))
     #CONFIGURING MAIN BUTTONS FOR START,PAUSE,RESET,MENU,BONUS GAME,INFO
