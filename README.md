@@ -1,28 +1,7 @@
 ##Projectile Motion
 
 
-
-Projectile motion is a form of motion in which an object or particle (called a projectile) is thrown near
-
- the earth's surface, and it moves along a curved path under the action of gravity only. The only force
-
- of significance that acts on the object is gravity, which acts downward to cause a downward acceleration.
-
- Because of the object's inertia, no external horizontal force is needed to maintain the horizontal motion.
-
-(source-wikipedia.org)
-
-
-
-For my project I used the parabolic equation for the trajectory of a projectile shown below:
-
-
-
- y=tan(theta)*x-[g]/[2Vo^2*cos^2(theta)]*x^2 ,
-
-
-
-And solved the equation to find y for every other x value from 0 to the windows width.
+ <a href="https://www.codecogs.com/eqnedit.php?latex=\tan&space;(\Theta&space;)x&space;-&space;\frac{g}{2V_{0}^{2}cos^{2}(\Theta&space;)}x^{2}" target="_blank"><img src="https://latex.codecogs.com/gif.latex?\tan&space;(\Theta&space;)x&space;-&space;\frac{g}{2V_{0}^{2}cos^{2}(\Theta&space;)}x^{2}" title="\tan (\Theta )x - \frac{g}{2V_{0}^{2}cos^{2}(\Theta )}x^{2}" /></a>
 
 g >=0
 
@@ -33,43 +12,11 @@ Velocity >=0
 
 ##Momentum
 
-
-
-In classical mechanics, linear momentum or translational momentum (pl. momenta; SI unit kg m/s, or
-
- equivalently, newton second) is the product of the mass and velocity of an object. For example, a
-
- heavy truck moving rapidly has a large momentum�it takes a large or prolonged force to get the truck
-
- up to this speed, and it takes a large or prolonged force to bring it to a stop afterwards. If the
-
- truck were lighter, or moving more slowly, then it would have less momentum.Like velocity, linear momentum
-
- is a vector quantity, possessing a direction as well as a magnitude.
-
-(source-wikipedia.org)
-
-
-
-This definition gives Linear momentum: P = mv,
-
-
-
-For two uniform masses (m_a & m_b) travelling at velocities (v_a & v_b) in a one dimensional resistance free
-
-environment like my simulation this can be extrapolated together with a coefficient of restitution (C_R)
-
-to find a solution for both masses in a collision:
-
-
+For two uniform masses (m_a & m_b) travelling at velocities (v_a & v_b) in a one dimensional resistance free environment we can find a solution for both masses in a collision:
 
  v_a=[m_a*u_a + m_b*u_b + m_b*C_R*(u_b-u_a)]/[m_a+m_b]
 
-
-
 and
-
-
 
  v_b=[m_a*u_a + m_b*u_b + m_a*C_R*(u_a-u_b)]/[m_a+m_b]
 
