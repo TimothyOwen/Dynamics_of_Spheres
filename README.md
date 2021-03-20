@@ -46,7 +46,7 @@ We assume a restoring force that is directly proportional to the displacement (y
 
 <a href="https://www.codecogs.com/eqnedit.php?latex=y&space;=&space;Asin(wt)&space;=&space;Asin((\frac{k}{m})^{\frac{1}{2}}t)" target="_blank"><img src="https://latex.codecogs.com/gif.latex?y&space;=&space;Asin(wt)&space;=&space;Asin((\frac{k}{m})^{\frac{1}{2}}t)" title="y = Asin(wt) = Asin((\frac{k}{m})^{\frac{1}{2}}t)" /></a>
 
-Where this program's boundary conditions for user input are defined as;
+where this program's boundary conditions for user input are defined as;
 
 <a href="https://www.codecogs.com/eqnedit.php?latex=1&space;\leq&space;m&space;\leq&space;10" target="_blank"><img src="https://latex.codecogs.com/gif.latex?1&space;\leq&space;m&space;\leq&space;10" title="1 \leq m \leq 10" /></a>
 
@@ -62,7 +62,7 @@ The equation of an ellipse with eccentricity (e) can be described;
 
 (This equation when programmed as an animation fails to accurately describe a satellite's motion. To fix this I crudely tried to relate the distance between the orbiting bodies to the time that should be waited between each iteration. The module is patchy and should be ignored for those who seek acccuracy.)
 
-Where this program's boundary conditions for user input are defined as;
+where this program's boundary conditions for user input are defined as;
 
 <a href="https://www.codecogs.com/eqnedit.php?latex=0&space;\leq&space;e&space;<&space;1" target="_blank"><img src="https://latex.codecogs.com/gif.latex?0&space;\leq&space;e&space;<&space;1" title="0 \leq e < 1" /></a>
 
