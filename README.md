@@ -28,7 +28,7 @@ For two uniform masses (<a href="https://www.codecogs.com/eqnedit.php?latex=m_{a
 
 <a href="https://www.codecogs.com/eqnedit.php?latex=v_{a}&space;=&space;\frac{m_{a}u_{a}&plus;m_{b}u_{b}&plus;m_{b}C_{R}(u_{b}-u_{a})}{m_{a}&plus;m_{b}}" target="_blank"><img src="https://latex.codecogs.com/gif.latex?v_{a}&space;=&space;\frac{m_{a}u_{a}&plus;m_{b}u_{b}&plus;m_{b}C_{R}(u_{b}-u_{a})}{m_{a}&plus;m_{b}}" title="v_{a} = \frac{m_{a}u_{a}+m_{b}u_{b}+m_{b}C_{R}(u_{b}-u_{a})}{m_{a}+m_{b}}" /></a>
 
-and
+and  
 
 <a href="https://www.codecogs.com/eqnedit.php?latex=v_{b}&space;=&space;\frac{m_{a}u_{a}&plus;m_{b}u_{b}&plus;m_{a}C_{R}(u_{a}-u_{b})}{m_{a}&plus;m_{b}}" target="_blank"><img src="https://latex.codecogs.com/gif.latex?v_{b}&space;=&space;\frac{m_{a}u_{a}&plus;m_{b}u_{b}&plus;m_{a}C_{R}(u_{a}-u_{b})}{m_{a}&plus;m_{b}}" title="v_{b} = \frac{m_{a}u_{a}+m_{b}u_{b}+m_{a}C_{R}(u_{a}-u_{b})}{m_{a}+m_{b}}" /></a>
 
