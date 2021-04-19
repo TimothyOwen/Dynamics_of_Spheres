@@ -1,6 +1,6 @@
 # Dynamics of Spheres
 
-## NOTE: CODE REQUIRES HIGH DEGREE OF REFACTORING
+## Note: Code requires refactoring
 
 Simulations of the dynamics of idealised spheres in four different generalised contexts. Initially created with A-Level students as the target end-users, to help them visualise complex topics taught in class. Built using Python and Tkinter.
 
