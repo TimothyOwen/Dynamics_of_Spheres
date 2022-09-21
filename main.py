@@ -36,7 +36,7 @@ def error_message():
 #-------------------------------------------------------------------------------
 def main_menu():
     create_canvas()
-    data_file()
+    #data_file()
     canvas.create_text(600,200,text="Main Menu",font="Helvetica 20")
     projectilebutton=Button(canvas,text="Projectiles",command=reset_canvas1,font="Arial")
     projectilebutton.configure(width=10,activebackground="white")
@@ -90,6 +90,7 @@ def reset_canvas4():
     __init4__()
 
 #READ DATA FILE
+# TODO: No datafile
 def data_file():
     global projectilelist,momentumlist,shmlist,orbitlist
     data=open('datafile.txt','r+')
